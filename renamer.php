@@ -397,24 +397,6 @@ class WPPB_Renamer {
 	 * 
 	 */
 	function commandline_help() {
-		
-	/* *
-	 * @link              http://example.com
-	 * @since             1.0.0
-	 * @package           My_Plugin
-	 *
-	 * @wordpress-plugin
-	 * Plugin Name:       My Plugin
-	 * Plugin URI:        http://example.com/my-plugin-uri/
-	 * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
-	 * Version:           1.0.0
-	 * Author:            Your Name or Your Company
-	 * Author URI:        http://example.com/
-	 * License:           GPL-2.0+
-	 * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
-	 * Text Domain:       my-plugin
-	 * Domain Path:       /languages
-	 * */
 	 
 		print "\n Usage: php rename.php <options>\n\n";
 		
@@ -519,7 +501,7 @@ class WPPB_Renamer {
 
 
 // Display errors.
-error_reporting (E_ALL ^ E_NOTICE ^ E_WARNING);
+//error_reporting (E_ALL ^ E_NOTICE ^ E_WARNING);
 
 // Initialize Extension Renamer instance.
 $renamer = new WPPB_Renamer(__FILE__);
@@ -751,7 +733,7 @@ if (!empty($initial_name) && is_string($initial_name) && !empty($new_name) && is
 	$msg_step_3_start = "";
 	$msg_step_3_start .= " \n";
 	$msg_step_3_start .= " *********************************************\n";
-	$msg_step_3_start .= " *********** KJM Extension Renamer ***********\n";
+	$msg_step_3_start .= " **************** WPPB Renamer ***************\n";
 	$msg_step_3_start .= " *********************************************\n";
 	$msg_step_3_start .= " \n";
 	$msg_step_3_start .= " Initial name: \t\t".$renamer->shell_text($initial_name, 'blue')."\n";
